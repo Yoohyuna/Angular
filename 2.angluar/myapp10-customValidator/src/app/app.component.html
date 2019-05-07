@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <form [formGroup]="form" (ngSubmit)="handleSubmit($event)">
+     소문자 <input type="text" placeholder="소문자 3글자"
+                  required pattern="[a-z]{3}" formControlName="lowerCase"><br>
+     대문자 <input type="text" placeholder="대문자 3글자"
+                  required pattern="[A-Z]{3}" formControlName="upperCase"><br>
+     수량 <input type="text" placeholder="100이상" formControlName="gt100Case"><br>   
+    <button (click)="setValue()">값 저장</button> 
+    <button (click)="reset()">지우기</button>         
+    <button type="submit" *ngIf="form.valid">확인</button>
+  </form>

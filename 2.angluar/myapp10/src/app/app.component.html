@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+  <h1> {{ title }}!</h1>
+
+  아이디<input type="text" name="userid" required pattern="[a-z][a-zA-Z0-9]{1,5}"
+        [(ngModel)]="user.userid" #xxx="ngModel">
+  <span *ngIf="xxx.invalid">아이디 필수</span><br>
+  비밀번호<input type="password" name="passwd" required minlength="3" maxlength="5"
+        [(ngModel)]="user.passwd" #passwd="ngModel">
+  <span *ngIf="passwd.invalid">비번 3~5 글자</span><br>
+  <hr> 
+  아이디2<input type="text" name="userid" required pattern="[a-z][a-zA-Z0-9]{1,5}"
+        [(ngModel)]="user.userid" #userid="ngModel"> 
+  <p>1.사용자로부터 입력받은값(userid.value):{{userid.value}}</p> 
+  <p>2.검증통과유무(userid.valid):{{userid.valid}}</p>
+  <p>3.검증통과 못하는 경우(userid.invalid):{{userid.invalid}}</p>
+  <p>4.커서입력유무(userid.untouched):{{userid.untouched}}</p>
+  <p>5.커서입력유무2(userid.touched):{{userid.touched}}</p>
+  <p>6.값을입력유무(userid.pristine):{{userid.pristine}}</p>
+  <p>7.오염상태(userid.dirty):{{userid.dirty}}</p>
+  <p>8.에러가 발생시 정보를 출력(userid.errors):{{userid.errors}}</p> 
+  <hr>
+  <h2>폼의 이름을 지정해서 유효성 검사</h2>
+  <form #f="ngForm">
+    이름<input type="text" name="username" required [ngModelOptions]="{standalone:true}"
+    [(ngModel)]="user.username" #username="ngModel">
+    <span *ngIf="username.invalid">이름 필수</span><br>
+    <input type="submit" value="전송" *ngIf="f.valid" >
+  </form>
+ 

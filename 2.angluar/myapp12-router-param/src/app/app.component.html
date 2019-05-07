@@ -1,0 +1,10 @@
+<!--The content below is only a placeholder and can be replaced.-->
+ <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <h3>라우팅</h3>
+  <a routerLink="fristview/100">first화면</a>
+  <a routerLink="secondview">second화면</a>
+  <a [routerLink]="['thirdview',{xxx:'홍길동',yyy:200}]">third화면</a>
+  <router-outlet></router-outlet>
+

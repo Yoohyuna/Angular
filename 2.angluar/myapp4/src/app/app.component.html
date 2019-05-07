@@ -1,0 +1,7 @@
+<!-- 부모에서 자식에게 전달하는 방법
+     (전달받은 EvnetEmitter객체명)="호출할 메서드명(~)"
+-->
+<app-book [str]="mesg" [str2]="mesg2" [str3]="mesg3"
+          [str4]="mesg4" [str5]="getMesg"
+          (kkk)="ppp()">
+</app-book>

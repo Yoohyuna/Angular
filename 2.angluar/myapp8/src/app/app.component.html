@@ -1,0 +1,14 @@
+
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <p appMyDirective>Hello</p>
+  <hr>
+  <h1>매개변수 전달 안한 경우의 지시자</h1>
+  <button appMyDirective>blue</button>
+  <button appMyDirective>yellow</button>
+  <hr>
+  <h1>매개변수를 전달받는 경우(디렉티브명="전달할값")</h1>
+  <button appMyDirective="red">red</button>
+  <button appMyDirective="green" (click)="changeColor()">green</button>
+ 

@@ -1,0 +1,27 @@
+<h1 class="red">{{title}}</h1>
+
+<p [ngClass]="'red'">Hello</p>
+<p [ngClass]="attStyle">Hello</p>
+<hr>
+<p [ngStyle]="{color:'blue'}">Happy</p>
+<p [ngStyle]="{color:attStyle}">Happy2</p>
+<p [style.color]="'blue'">Happy3</p>
+<p [style.color]="attStyle">Happy4</p>
+<hr>
+<h2>*ngIf="조건" 형태(show or hide)</h2>
+<p *ngIf="true">Hello</p>
+<p *ngIf="false">Hello2</p>
+<p *ngIf="result">Hello3</p>
+<p *ngIf="result2">Hello4</p>
+<p *ngIf="result3==10">Hello5</p>
+<hr>
+<div [ngSwitch]="grade">
+  <h3 *ngSwitchCase='90'>A학점</h3>
+  <h3 *ngSwitchCase='80'>B학점</h3>
+  <h3 *ngSwitchCase='70'>C학점</h3>
+  <h3 *ngSwitchDefault>F학점</h3>
+</div>
+<hr>
+<div *ngFor="let p of items; let x=index">
+   {{x+1}}&nbsp;{{p.name}}&nbsp; {{p.age}}
+</div>
